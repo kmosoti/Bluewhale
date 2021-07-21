@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+
+}
+
+.labels {
+  display: inline-block;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-body {
+  height: 1000px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(1px + 1vmin);
+  color: white;
+  border: 2px solid blue;
+}
+
+.App-body select{
+  font-size: calc(5px + 1vmin);
+  color: black;
+}
+
+.App-body div{
+  width: auto;
+  float: left;
+  clear: left;
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+.Input-field {
+  width: 200px;
+  display: flex;
+  margin: 100px;
+  flex-direction: inline-block;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+
+.Input-table{
+  display: flex;
+  margin: auto;
+  flex-direction: inline-block;
+  width: 1000px;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+}
+
+.total_Price h1{
+  color: black;
+}
+
+.add-button {
+  display: inline-block;
+  width: 100%;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.labels {
+  display: inline-block;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
