@@ -21,6 +21,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TrashIcon from '@material-ui/icons/Delete'
 
+//Import Dropdown Script
+import Dropdown from './dropdown';
+
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -153,81 +156,17 @@ export default function App() {
 
 
   const handleClick = (e) => {
-    cloud_input.cloud_var = document.getElementById("cloudProv").value;
-    cloud_input.region_var = "disabled"//document.getElementById("region_var").value;
-    cloud_input.resource_type = document.getElementById("resource_type").value;
-    cloud_input.resource_var = document.getElementById("resource_var").value;
-    console.log(cloud_input);
+    //cloud_input.cloud_var = document.getElementById("cloudProv").value;
+    //cloud_input.region_var = "disabled"//document.getElementById("region_var").value;
+    //cloud_input.resource_type = document.getElementById("resource_type").value;
+    //cloud_input.resource_var = document.getElementById("resource_var").value;
+    alert("Adding to Table...")
   }
   return (
     <div className="App">
       <div className="App-body">
         <div className="Input-field">
-          <div className="float-child">
-            <FormControl>
-              <InputLabel htmlFor="cloudProv">Select Cloud Provider</InputLabel>
-              <Select
-                native
-                value={state.cloudProv}
-                onChange={handleChangeCloud}
-                id = "cloudProv"
-                defaultValue = {""}
-              >
-                <option value="" defaultValue disabled>SELECT</option>
-                <option value={"Microsoft Azure"}>Microsoft Azure</option>
-                <option value={"Google Cloud Platform"}>Google Cloud Platform</option>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="float-child">
-            <FormControl disabled>
-                <InputLabel htmlFor="region">Select Region</InputLabel>
-                <Select
-                  native
-                  value={state.region}
-                  onChange={handleChange}
-                  id = "region"
-                  defaultValue = {""}
-                >
-                  <option aria-label="None" value="" />
-                  <option value={"East"}>East</option>
-                  <option value={"Central"}>Central</option>
-                  <option value={"West"}>West</option>
-                </Select>
-                <FormHelperText>Disabled</FormHelperText>
-              </FormControl>
-          </div>
-          <div className="float-child">
-            <FormControl>
-              <InputLabel htmlFor="resource_type">Select Resource Type</InputLabel>
-              <Select
-                native
-                value={state.resourceType}
-                onChange={handleChange}
-                id = "resource_type"
-                defaultValue = {""}
-              >
-                <option value="" disabled>SELECT</option>
-                <option value={"Compute"}>Compute</option>
-                <option value={"Storage"}>Storage</option>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="float-child">
-            <FormControl>
-              <InputLabel htmlFor="resource_var">Select Resource</InputLabel>
-              <Select
-                native
-                value={state.resource}
-                onChange={handleChange}
-                id ="resource_var"
-                defaultValue = {""}
-              >
-                <option value="" disabled>SELECT</option>
-                <option value={"None yet"}>None</option>
-              </Select>
-            </FormControl>
-          </div>
+          <Dropdown onChange={handleChangeCloud}/>
           <div>
             <FormControl>
               <Button
